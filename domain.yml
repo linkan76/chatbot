@@ -1,0 +1,61 @@
+ intents:
+  - greet
+  - thank
+  - goodbye
+  - ask
+  - affirm
+  - restaurant_search
+  - inform
+
+
+ entities:
+  - location
+  - cuisine
+  - app
+
+
+ slots:
+  location:
+     type : text
+  cuisine:
+     type: text
+  app:
+     type: text
+  requested_slot:
+     type: unfeaturized
+
+
+ templates:
+  utter_greet:
+    - text: "Hey how can I help you?"
+
+  utter_thank:
+    - text: "My pleasure"
+ 
+  utter_goodbye:
+    - text: "Great carry on !"
+
+  utter_ask_appname:
+    - text: "for which app?."
+  
+  utter_ask:
+    - text: "okk searching in progess..."
+
+  utter_affirm:
+    - text: "ok"
+  utter_ask_cuisine:
+    - text: "which cuisine you want?"
+  utter_ask_location:
+    - text: "in which location you want?"
+
+
+ actions:
+  - utter_greet
+  - utter_thank
+  - utter_goodbye
+  - utter_affirm
+  - utter_ask_appname
+  - utter_ask
+  - actions.ActionaskRestaurant
+  - utter_ask_cuisine
+  - utter_ask_location
